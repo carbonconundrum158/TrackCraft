@@ -1,32 +1,13 @@
-# 🏁 TrackCraft AI Coach
+# 🏁 TrackCraft: AI Coach for Racing Telemetry
 
-**TrackCraft** is a Python-based tool that analyzes lap telemetry from racing data to deliver turn-by-turn performance feedback in plain English.
+TrackCraft is a Python-based tool that delivers lap-by-lap feedback for racing drivers.  
+It currently analyzes braking behavior — including entry speed, brake pressure, and braking duration — to tell you which lap and technique performed best in each corner.
 
-### 🚗 Features
-- Compares multiple laps to identify braking improvements
-- Highlights the best line through each corner
-- Outputs lap time summaries
-- Generates corner-specific coaching like:
-  - "Turn 1 was fastest as the driver braked 32 feet earlier with lighter brake pressure and a shorter brake zone."
+### 🧭 What's Next?
+In future releases, we plan to integrate additional performance metrics like:
+- 🌀 Lateral and longitudinal G-forces
+- 🦶 Throttle application and release timing
+- 🛞 Steering input trends
 
-### 📊 Input
-CSV file containing telemetry data with:
-- `lap`
-- `distance`
-- `brake`
-- `speed`
-- `time_sec`
+These insights will help drivers build a complete picture of their car control and racecraft.
 
-### 🧠 How It Works
-The script:
-1. Segments your telemetry by laps and corners.
-2. Extracts braking points, durations, speeds.
-3. Compares lap segments to identify what made a turn faster.
-
-### ✅ Example
-🔧 Turn 1 — Best: Lap 3 (3.40s, exit 85.0 mph)
-Turn 1 was fastest as the driver braked 32.5 feet earlier with lighter brake pressure (8.7% less) and a shorter brake zone of 90.2 feet.
-
-### 🔧 Run It
-```bash
-python main.py data/sample_lap.csv
